@@ -1,0 +1,219 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+
+h1 {
+	font-family: "Fontdiner Swanky", serif;
+	color: black;
+	padding-top: 20px;
+	text-align: center;
+}
+
+.content {
+	padding-top: 100px;
+	padding-bottom: 40px;
+	font-size: 20px;
+}
+
+.container {
+    max-width: 700px; 
+    margin: 0 auto; 
+	margin-top: 45px;
+	text-align: center;
+	color: black;
+}
+
+p {
+	margin-top: 10px;
+	font-family:Arial, sans-serif;
+}
+
+
+#second {
+	margin-top:30px;
+}
+
+#third {
+	margin-top:30px;
+}
+
+#topNav {
+  background: #242222;
+  padding: 5px 20px;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* viktigt för höger/mitten/vänster */
+  z-index: 1000;
+}
+
+/* Logga vänster */
+#topNav .icon {
+  height: 80px;
+  width: auto;
+}
+
+/* Centrerade länkar */
+.center-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex: 1;
+}
+
+/* Länkar */
+#topNav a {
+  color: white;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-family: 'chocolate sans', sans-serif;
+  text-transform: uppercase;
+  transition: color 0.5s;
+  font-weight: bold;
+}
+
+#topNav a:hover {
+  color: blue;
+}
+
+#topNav a.active {
+  color: blue;
+}
+
+/* ============================
+   Sociala ikoner (höger)
+============================ */
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+
+/* Individuell storlek */
+.tiktok {
+  width: 50px;
+  height: 50px;
+}
+
+.youtube {
+  width: 130px;
+  height: 85px;
+}
+
+.instagram {
+  width: 40px;
+  height: 40px;
+}
+
+/* ============================
+   Bottom Footer
+============================ */
+.bottom-footer{
+  background: #242222;
+  padding: 5px 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.bottom-footer .icon {
+  height: 120px;
+  width: auto;
+}
+
+
+/* Centrerade länkar */
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  flex: 1;
+  color: white;
+}
+
+/* Länkar */
+.bottom-footer a {
+  padding: 10px;
+}
+
+.bottom-footer .tiktok {
+  width: 28px;
+  height: 30px;
+}
+
+.bottom-footer .youtube {
+  width: 80px;
+  height: 55px;
+}
+
+.bottom-footer .instagram {
+  width: 25px;
+  height: 25px;
+}
+
+@media (max-width:768px){
+
+  /* Navbar */
+  #topNav .icon {
+    height:60px;
+}
+
+h2 {
+	font-family: "Fontdiner Swanky", serif;
+	font-size: 30px;
+}
+
+.center-links {
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+#topNav a {
+    font-size:14px;
+    padding:5px 15px;
+}
+
+.container {
+    max-width: 400px; 
+    margin: 0 auto; 
+	margin-top: 45px;
+	text-align: center;
+	color: black;
+}
+
+p {
+	font-size: 17px;
+	margin-top: 10px;
+}
+
+h1 {
+	font-family: "Fontdiner Swanky", serif;
+	color: black;
+	padding-top: 40px;
+	text-align: center;
+}
+
+.bottom-footer .icon{
+    height:110px;
+}
+
+
+.text{
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.bottom-footer a{
+    font-size:14px;
+    padding:5px 15px;
+}
