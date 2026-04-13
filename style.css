@@ -1,10 +1,12 @@
-/* ============================
-   Globala inställningar
-============================ */
+* {
+  box-sizing: border-box;
+}
+
 body{
   margin:0;
   font-family:Arial, sans-serif;
   background: white;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -12,9 +14,33 @@ h2 {
 	font-size: 50px;
 }
 
-/* ============================
-   TopNav / Navbar
-============================ */
+.feedback-box {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  max-width: 220px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.feedback-box button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.feedback-box button:hover {
+  background-color: #333;
+}
+
 #topNav {
   background: #242222;
   padding: 5px 20px;
@@ -22,26 +48,24 @@ h2 {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* viktigt för höger/mitten/vänster */
+  justify-content: space-between;
   z-index: 1000;
 }
 
-/* Logga vänster */
 #topNav .icon {
   height: 80px;
   width: auto;
 }
 
-/* Centrerade länkar */
 .center-links {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
   flex: 1;
+  flex-wrap: wrap;
 }
 
-/* Länkar */
 #topNav a {
   color: white;
   padding: 10px 30px;
@@ -60,17 +84,13 @@ h2 {
   color: blue;
 }
 
-/* ============================
-   Sociala ikoner (höger)
-============================ */
 .socials {
   display: flex;
   align-items: center;
   gap: 2px;
+  flex-wrap: wrap;
 }
 
-
-/* Individuell storlek */
 .tiktok {
   width: 50px;
   height: 50px;
@@ -85,9 +105,7 @@ h2 {
   width: 40px;
   height: 40px;
 }
-/* ============================
-   Hero Section
-============================ */
+
 .hero{
   min-height:500px;
   background:url("bild.jpg") center/cover no-repeat;
@@ -97,6 +115,7 @@ h2 {
   text-align:left;
   color:white;
   padding:20px;
+  padding-top: 100px;
 }
 
 .hero-content{
@@ -110,7 +129,6 @@ h2 {
 .hero h1{
   font-size:40px;
   margin-bottom:10px;
-  
 }
 
 .hero p{
@@ -132,9 +150,6 @@ h2 {
   background:#e05500;
 }
 
-/* ============================
-   Content Section
-============================ */
 .content{
   padding:80px 20px;
   max-width:900px;
@@ -144,25 +159,20 @@ h2 {
   text-align:center;
 }
 
-/* ============================
-   Video / Trailer
-============================ */
 .video-container{
   display:flex;
   justify-content:center;
   margin:40px 0;
+  overflow:hidden;
 }
 
 .video-container iframe{
-  width:800px;
+  width:100%;
+  max-width:800px;
   height:450px;
-  max-width:100%;
   border-radius:10px;
 }
 
-/* ============================
-   Bottom Footer
-============================ */
 .bottom-footer{
   background: #242222;
   padding: 5px 20px;
@@ -171,6 +181,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .bottom-footer .icon {
@@ -178,8 +189,6 @@ h2 {
   width: auto;
 }
 
-
-/* Centrerade länkar */
 .text {
   display: flex;
   align-items: center;
@@ -187,9 +196,9 @@ h2 {
   gap: 70px;
   flex: 1;
   color: white;
+  flex-wrap: wrap;
 }
 
-/* Länkar */
 .bottom-footer a {
   padding: 10px;
 }
@@ -209,15 +218,15 @@ h2 {
   height: 25px;
 }
 
-
-/* ============================
-   Mobilanpassning
-============================ */
 @media (max-width:768px){
 
-  /* Navbar */
+#topNav {
+  flex-direction: column;
+  align-items: center;
+}
+
 #topNav .icon{
-    height:60px;
+  height:60px;
 }
 
 h2 {
@@ -225,66 +234,90 @@ h2 {
 	font-size: 30px;
 }
 
+.tiktok {
+  width: 35px;
+  height: 35px;
+}
+
+.youtube {
+  width: 80px;
+  height: 55px;
+}
+
+.instagram {
+  width: 25px;
+  height: 25px;
+}
+
 .center-links{
-    gap:10px;
-    flex-wrap:wrap;
-    justify-content:center;
+  gap:10px;
+  justify-content:center;
 }
 
 #topNav a{
-    font-size:14px;
-    padding:5px 15px;
+  font-size:14px;
+  padding:5px 15px;
 }
 
-  /* Hero */
 .hero{
-    justify-content:center;
-    text-align:center;
-  }
+  justify-content:center;
+  text-align:center;
+  padding-top: 200px;
+}
 
 .hero-content{
-    max-width:90%;
-    margin-left:0;
-    padding:20px;
+  max-width:90%;
+  margin-left:0;
+  padding:20px;
 }
 
 .hero h1{
-    font-size:28px;
+  font-size:28px;
 }
 
 .hero p{
-    font-size:16px;
+  font-size:16px;
 }
 
-  .read-more{
-    width:100%;
+.read-more{
+  width:100%;
 }
 
-  /* Content */
 .content{
-    font-size:16px;
-    padding:40px 15px;
+  font-size:16px;
+  padding:40px 15px;
 }
 
-  /* Video */
 .video-container iframe{
-    width:100%;
-    height:250px;
+  height:250px;
 }
 
 .bottom-footer .icon{
-    height:110px;
+  height:110px;
 }
 
-
 .text{
-    gap:10px;
-    flex-wrap:wrap;
-    justify-content:center;
+  gap:10px;
+  justify-content:center;
 }
 
 .bottom-footer a{
-    font-size:14px;
-    padding:5px 15px;
+  font-size:14px;
+  padding:5px 15px;
 }
+
+.feedback-box {
+max-width: 160px;
+padding: 10px;
+font-size: 12px;
+bottom: 150px;
+right: 10px;
 }
+
+.feedback-box button {
+padding: 6px 8px;
+font-size: 12px;
+}
+
+}
+

@@ -1,71 +1,82 @@
-html, body {
-	margin: 0;
-	padding: 0;
+* {
+  box-sizing: border-box;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background: white;
+}
 
 h1 {
-	font-family: "Fontdiner Swanky", serif;
-	color: black;
-	padding-top: 20px;
-	text-align: center;
+  font-family: "Fontdiner Swanky", serif;
+  color: black;
+  padding-top: 20px;
+  text-align: center;
 }
 
-.content {
-	padding-top: 100px;
-	padding-bottom: 40px;
-	font-size: 20px;
-}
-
-.container {
-    max-width: 700px; 
-    margin: 0 auto; 
-	margin-top: 45px;
-	text-align: center;
-	color: black;
+h2 {
+  font-family: "Fontdiner Swanky", serif;
 }
 
 p {
-	margin-top: 10px;
-	font-family:Arial, sans-serif;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
 }
 
-
-#second {
-	margin-top:30px;
+/* ============================
+   Content
+============================ */
+.content {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  font-size: 20px;
 }
 
+.container {
+  max-width: 700px;
+  margin: 45px auto 0;
+  text-align: center;
+  color: black;
+}
+
+#second,
 #third {
-	margin-top:30px;
+  margin-top: 30px;
 }
 
+/* ============================
+   Navbar
+============================ */
 #topNav {
   background: #242222;
   padding: 5px 20px;
   position: fixed;
   width: 100%;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* viktigt för höger/mitten/vänster */
+  justify-content: space-between;
   z-index: 1000;
 }
 
-/* Logga vänster */
 #topNav .icon {
   height: 80px;
   width: auto;
 }
 
-/* Centrerade länkar */
 .center-links {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
   flex: 1;
+  flex-wrap: wrap;
 }
 
-/* Länkar */
 #topNav a {
   color: white;
   padding: 10px 30px;
@@ -76,16 +87,13 @@ p {
   font-weight: bold;
 }
 
-#topNav a:hover {
-  color: blue;
-}
-
+#topNav a:hover,
 #topNav a.active {
   color: blue;
 }
 
 /* ============================
-   Sociala ikoner (höger)
+   Socials
 ============================ */
 .socials {
   display: flex;
@@ -93,8 +101,6 @@ p {
   gap: 2px;
 }
 
-
-/* Individuell storlek */
 .tiktok {
   width: 50px;
   height: 50px;
@@ -111,16 +117,16 @@ p {
 }
 
 /* ============================
-   Bottom Footer
+   Footer
 ============================ */
-.bottom-footer{
+.bottom-footer {
   background: #242222;
   padding: 5px 20px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .bottom-footer .icon {
@@ -128,8 +134,6 @@ p {
   width: auto;
 }
 
-
-/* Centrerade länkar */
 .text {
   display: flex;
   align-items: center;
@@ -137,9 +141,9 @@ p {
   gap: 70px;
   flex: 1;
   color: white;
+  flex-wrap: wrap;
 }
 
-/* Länkar */
 .bottom-footer a {
   padding: 10px;
 }
@@ -159,61 +163,60 @@ p {
   height: 25px;
 }
 
-@media (max-width:768px){
+/* ============================
+   Mobil
+============================ */
+@media (max-width:768px) {
 
-  /* Navbar */
+  #topNav {
+    flex-direction: column;
+    align-items: center;
+  }
+
   #topNav .icon {
-    height:60px;
-}
+    height: 60px;
+  }
 
-h2 {
-	font-family: "Fontdiner Swanky", serif;
-	font-size: 30px;
-}
+  .center-links {
+    gap: 10px;
+    justify-content: center;
+  }
 
-.center-links {
-    gap:10px;
-    flex-wrap:wrap;
-    justify-content:center;
-}
+  #topNav a {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
 
-#topNav a {
-    font-size:14px;
-    padding:5px 15px;
-}
+  h1 {
+    padding-top: 140px;
+    font-size: 24px;
+  }
 
-.container {
-    max-width: 400px; 
-    margin: 0 auto; 
-	margin-top: 45px;
-	text-align: center;
-	color: black;
-}
+  .container {
+    max-width: 90%;
+    margin-top: 30px;
+  }
 
-p {
-	font-size: 17px;
-	margin-top: 10px;
-}
+  p {
+    font-size: 16px;
+  }
 
-h1 {
-	font-family: "Fontdiner Swanky", serif;
-	color: black;
-	padding-top: 40px;
-	text-align: center;
-}
+  .content {
+    font-size: 16px;
+    padding-top: 80px;
+  }
 
-.bottom-footer .icon{
-    height:110px;
-}
+  .bottom-footer .icon {
+    height: 110px;
+  }
 
+  .text {
+    gap: 10px;
+    justify-content: center;
+  }
 
-.text{
-    gap:10px;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.bottom-footer a{
-    font-size:14px;
-    padding:5px 15px;
+  .bottom-footer a {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
 }
